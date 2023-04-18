@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cont-productos, #cont-productosSinStock {
+    text-align: center;
+}
+
+.producto {
+    width: auto;
+    display: flex;
+    background-color: antiquewhite;
+    margin: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem 0px;
+}
+
+.card-producto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.4rem;
+}
+
+.campos {
+    display: flex;
+}
+
+#contAgregarProducto {
+    margin: 1rem;
+}
+
+.label-producto {
+    display: flex;
+    flex-direction: column;
+}
+
+.nuevoProducto>.label-producto {
+    margin: 1rem;
+}
+
+.label-producto {
+    align-items: center;
+}
+
+.label-producto>input {
+    height: 2rem;
+    width: 30%;
+}
+
+#btnCerrar {
+    display: none;
+}
+
+#agregarProducto{ 
+    width: 10rem;
+}
+
+.headerAgregarProducto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.headerAgregarProducto>input {
+    padding: 0.5rem;
+}
+
+.cont-editar {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.cont-editar>input {
+    margin: 0.5rem;
+}
