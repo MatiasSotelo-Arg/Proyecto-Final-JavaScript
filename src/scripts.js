@@ -5,6 +5,8 @@
 		// productosSinStock();
 		// productosDisponibles();
 // 	crearProducto()
+		//validarFormulario();
+		//agregarNuevoProducto();
 //  modificarProducto();
 // 	eliminarProducto();
 
@@ -398,27 +400,40 @@ function nuevoProducto() {
 			const nuevoCosto = document.getElementById("costo").value;
 			const nuevoPrecio = document.getElementById("precio").value;
 			const nuevoStock = document.getElementById("stock").value;
-	
-			const nuevoObjeto = new Producto (nuevoId, nuevoNombre, nuevoCosto, nuevoPrecio, nuevoStock);
-		
-			productos.push(nuevoObjeto);
 
-			//limpia los valores de los imputs
-			document.getElementById("identificador").value = "";
-			document.getElementById("nombre").value = "";
-			document.getElementById("costo").value = "";
-			document.getElementById("precio").value = "";
-			document.getElementById("stock").value = "";
-
-			Swal.fire({
-				position: 'center',
-				icon: 'success',
-				title: `Se agrego el prodcuto: ${nuevoNombre}`,
-				showConfirmButton: false,
-				timer: 1500
-			})
+				// validar formulario
+				if(nuevoId == "" || nuevoNombre == "" || nuevoStock == "" || nuevoCosto == "" || nuevoPrecio == "" ) {
+					Swal.fire({
+						position: 'center',
+						icon: 'warning',
+						title: 'Complete todos los campos',
+						showConfirmButton: false,
+						timer: 1500
+					  })
+				} else {
+					// agrega el nuevo producto
+					const nuevoObjeto = new Producto (nuevoId, nuevoNombre, nuevoCosto, nuevoPrecio, nuevoStock);
 			
-			mostrarProductoDom();
+					productos.push(nuevoObjeto);
+		
+					//limpia los valores de los imputs
+					document.getElementById("identificador").value = "";
+					document.getElementById("nombre").value = "";
+					document.getElementById("costo").value = "";
+					document.getElementById("precio").value = "";
+					document.getElementById("stock").value = "";
+		
+					Swal.fire({
+						position: 'center',
+						icon: 'success',
+						title: `Se agrego el prodcuto: ${nuevoNombre}`,
+						showConfirmButton: false,
+						timer: 1500
+					})
+					
+					mostrarProductoDom();
+					
+				}
 			})
 
 			contAgregarProducto.dataset.creado = "true";

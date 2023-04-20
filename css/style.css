@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    margin: 1rem;
+    border: 1px solid gray;
+}
+
 #cont-productos, #cont-productosSinStock {
     text-align: center;
 }
@@ -22,6 +28,8 @@
     display: flex;
     flex-direction: column;
     line-height: 1.4rem;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
 .campos {
@@ -47,7 +55,9 @@
 
 .label-producto>input {
     height: 2rem;
-    width: 30%;
+    width: 50%;
+    background-color: aliceblue;
+    color: black;
 }
 
 #btnCerrar {
@@ -56,16 +66,14 @@
 
 #agregarProducto{ 
     width: 10rem;
+    background-color: black;
+    color: white;
 }
 
 .headerAgregarProducto {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-}
-
-.headerAgregarProducto>input {
-    padding: 0.5rem;
 }
 
 .cont-editar {
@@ -85,4 +93,22 @@
 
 .cont-editar>input {
     margin: 0.5rem;
+    background-color: aliceblue;
+    color: black;
+}
+
+.cont-editar>button {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+input {
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
 }
